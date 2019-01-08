@@ -18,7 +18,7 @@ public class E01_Outer {
 
     public static void main(String[] args) {
         E01_Outer outer = new E01_Outer();
-        Inner inner = outer.getInner();
+        E01_Outer.Inner inner = outer.getInner();
         System.out.println(inner.name());
     }
 
