@@ -3,7 +3,7 @@ package innerclasses;
 /**
  * Author   : Victor Chong
  * Date     : 2018/11/8 15:39
- * Brief    :
+ * Brief    : 内部类可以直接访问外部类私有的元素和方法
  */
 public class E07_InnerClassAccess {
     private int i = 10;

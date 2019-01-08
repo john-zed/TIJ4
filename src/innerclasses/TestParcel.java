@@ -7,6 +7,7 @@ package innerclasses;
  */
 
 class Parcel4 {
+    //private内部类，因此只有Parcel4能访问
     private class PContents implements Contents {
         private int i = 11;
 
@@ -16,6 +17,7 @@ class Parcel4 {
         }
     }
 
+    //protected内部类，只有Parcel4及子类和同一包下类能访问
     protected class PDestination implements Destination {
         private String label;
 
