@@ -3,7 +3,7 @@ package innerclasses;
 /**
  * Author   : Victor Chong
  * Date     : 2018/11/7 14:26
- * Brief    : 内部类对象可以直接访问外部类的所有成员
+ * Brief    : 内部类对象可以直接访问外围对象的所有成员；内部类可以访问外围类所有元素;也是迭代器设计模式的一个例子
  */
 
 interface Selector {
@@ -33,30 +33,22 @@ public class Sequence {
 
         @Override
         public boolean end() {
-            return i == items.length;
+            return i == items.length;   //内部类可访问外围类元素
         }
 
         @Override
         public Object current() {
-            return items[i];
+            return items[i];    //内部类可访问外围类元素
         }
 
         @Override
         public void next() {
-            if (i < items.length) i++;
-        }
-
-        public Sequence outer() {
-            return Sequence.this;
+            if (i < items.length) i++;  //内部类可访问外围类元素
         }
     }
 
     public Selector selector() {
         return new SequenceSelector();
-    }
-
-    public boolean check(){
-        return this == ((SequenceSelector)selector()).outer();
     }
 
     public static void main(String[] args) {
