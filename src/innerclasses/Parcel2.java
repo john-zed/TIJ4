@@ -32,9 +32,8 @@ public class Parcel2 {
     }
 
     public void ship(String dest){
-        //Contents c = new Contents();    //不建议直接实例化
+        //非静态内部类不需要具体指明内部类对象的类型
         Contents c = contents();
-        //Destination d = new Destination();  //不建议直接实例化
         Destination d = to(dest);
         System.out.println(d.readLabel());
     }
@@ -44,7 +43,10 @@ public class Parcel2 {
         p.ship("Tasmania");
         Parcel2 q = new Parcel2();
         //定义内部类实例的引用
-        Contents c = q.contents();
-        Destination d = q.to("Borneo");
+        Parcel2.Contents c = q.contents();
+        Parcel2.Destination d = q.to("Borneo");
+        //其实不具体指明类型也可以，默认就是本类中的内部类类型
+        //Contents c = q.contents();
+        //Destination d = q.to("Borneo");
     }
 }
