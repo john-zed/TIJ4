@@ -3,7 +3,7 @@ package innerclasses;
 /**
  * Author   : Victor Chong
  * Date     : 2018/11/7 15:14
- * Brief    :
+ * Brief    : 在内部类中获取对外部类对象的引用
  */
 public class DotThis {
     void f() {

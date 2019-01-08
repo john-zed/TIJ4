@@ -3,7 +3,7 @@ package innerclasses;
 /**
  * Author   : Victor Chong
  * Date     : 2018/11/7 15:42
- * Brief    :
+ * Brief    : 使用.new 创建内部类的实例
  */
 public class Parcel3 {
     class Contents {
@@ -28,7 +28,7 @@ public class Parcel3 {
 
     public static void main(String[] args) {
         Parcel3 p = new Parcel3();
-        Contents c = p.new Contents();
-        Destination d = p.new Destination("Tasmania");
+        Parcel3.Contents c = p.new Contents();
+        Parcel3.Destination d = p.new Destination("Tasmania");
     }
 }
