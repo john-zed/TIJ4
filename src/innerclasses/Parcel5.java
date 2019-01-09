@@ -7,6 +7,7 @@ package innerclasses;
  */
 public class Parcel5 {
     public Destination destination(String s){
+        //该类在destination方法之外无法访问
         class PDestination implements Destination{
             private String label;
             private PDestination(String whereTo){
