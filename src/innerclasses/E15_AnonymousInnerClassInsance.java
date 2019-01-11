@@ -18,7 +18,7 @@ class SimpleClass {
     }
 }
 
-public class E15_AnonymousInnerClassConstructor {
+public class E15_AnonymousInnerClassInstance {
 
     public SimpleClass getSimpleClassInstance(final int i){
         return new SimpleClass(i){
@@ -26,7 +26,7 @@ public class E15_AnonymousInnerClassConstructor {
     }
 
     public static void main(String[] args) {
-        E15_AnonymousInnerClassConstructor aic = new E15_AnonymousInnerClassConstructor();
+        E15_AnonymousInnerClassInstance aic = new E15_AnonymousInnerClassInstance();
         aic.getSimpleClassInstance(15).value();
     }
 
